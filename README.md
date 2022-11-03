@@ -13,7 +13,7 @@ download/run instructions:
 git clone https://github.com/m2rk1312/shitterClient.git
 cd shitterClient
 yarn #install deps
-yarn start #run client
+yarn package-win
 ```
 if you want to compile it, just run `yarn package-<PLATFORM>` but with your platform, ex: `yarn package-win`
 
