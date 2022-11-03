@@ -15,7 +15,7 @@ cd shitterClient
 yarn #install deps
 yarn start #run client
 ```
-if you want to compile it, just run `yarn package-<PLATFORM>` but with your platform, ex: `yarn package-linux`
+if you want to compile it, just run `yarn package-<PLATFORM>` but with your platform, ex: `yarn package-win`
 
 ```
 Fork of JANREX - https://github.com/giantninja908/JANREX
