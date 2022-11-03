@@ -2,6 +2,7 @@
 
 const { app, BrowserWindow, screen } = require("electron");
 const path = require('path');
+require('v8-compile-cache');
 
 const { shell } = require('electron');
 
