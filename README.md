@@ -5,7 +5,8 @@ bro thinks hes tough talking on discord 😭 if you ever see me in the streets y
 # Hotkeys
 - F11 | Toggle fullscreen
 - F5 | Refresh page
-- F6 | Join link stored in clipboard
+- F6 | Go to https://krunker.io / find new lobby
+- F7 | Join link stored in clipboard
 
 # Build instructions
 ```sh
