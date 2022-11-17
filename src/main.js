@@ -40,6 +40,9 @@ const init =
         event.preventDefault();
         shell.openExternal(url);
         return;
+      } else if (url.startsWith('https://krunker.io')) {
+        win.loadURL("https://krunker.io");
+        event.preventDefault()
       } else {
         event.preventDefault();
         const newWin = new BrowserWindow({
