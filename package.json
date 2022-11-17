@@ -4,10 +4,13 @@
   "description": "💀 shitterClient 💀 by m2rk",
   "main": "src/main.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
+    "startd": "npm start -- --debug",
+    "startd-linux": "ELECTRON_ENABLE_STACK_DUMPING=1 ELECTRON_ENABLE_LOGGING=true npm start -- --debug",
     "pack": "electron-builder --dir",
     "dist": "electron-builder",
-    "release": "electron-builder --publish always",
+    "release": "electron-builder",
     "postinstall": "electron-builder install-app-deps"
   },
   "author": "m2rk1312",
