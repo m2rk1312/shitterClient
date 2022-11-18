@@ -116,3 +116,8 @@ app.on('window-all-closed', () => {
     app.quit()
   }
 })
+
+// Credits //
+
+// https://github.com/idkr-client/idkr
+// https://github.com/giantninja908/JANREX
