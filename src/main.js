@@ -66,7 +66,12 @@ const init =
   }
 
 const addSwitches = () => {
-  app.commandLine.appendSwitch('force-high-performance-gpu');
+  app.commandLine.appendSwitch('disable-features=WinRetrieveSuggestionsOnlyOnDemand,HardwareMediaKeyHandling,MediaSessionService');
+  app.commandLine.appendSwitch('enable-hardware-overlays=single-fullscreen,single-on-top,underlay');
+  app.commandLine.appendSwitch('enable-features=EnableDrDc,CanvasOopRasterization,BackForwardCache:TimeToLiveInBackForwardCacheInSeconds/300/should_ignore_blocklists/true/enable_same_site/true,ThrottleDisplayNoneAndVisibilityHiddenCrossOriginIframes,UseSkiaRenderer,WebAssemblyLazyCompilation');
+  app.commandLine.appendSwitch('disable-features=Vulkan');
+  app.commandLine.appendSwitch('ignore-gpu-blocklist');
+  app.commandLine.appendSwitch('force_high_performance_gpu');
   app.commandLine.appendSwitch('disable-breakpad');
   app.commandLine.appendSwitch('disable-component-update');
   app.commandLine.appendSwitch('disable-print-preview');
@@ -77,10 +82,10 @@ const addSwitches = () => {
   app.commandLine.appendSwitch('enable-webgl2-compute-context');
   app.commandLine.appendSwitch('disable-hang-monitor');
   app.commandLine.appendSwitch('no-referrers');
-  app.commandLine.appendSwitch('renderer-process-limit', 100);
-  app.commandLine.appendSwitch('max-active-webgl-contexts', 100);
+  app.commandLine.appendSwitch('renderer-process-limit=100');
+  app.commandLine.appendSwitch('max-active-webgl-contexts=100');
   app.commandLine.appendSwitch('enable-quic');
-  app.commandLine.appendSwitch('high-dpi-support', 1);
+  app.commandLine.appendSwitch('high-dpi-support=1');
   app.commandLine.appendSwitch('ignore-gpu-blacklist');
   app.commandLine.appendSwitch('disable-2d-canvas-clip-aa');
   app.commandLine.appendSwitch('disable-bundled-ppapi-flash');
@@ -92,10 +97,6 @@ const addSwitches = () => {
   app.commandLine.appendSwitch('enable-webgl');
   app.commandLine.appendSwitch('disable-background-timer-throttling');
   app.commandLine.appendSwitch('disable-renderer-backgrounding');
-  app.commandLine.appendSwitch('autoplay-policy', 'no-user-gesture-required');
-  app.commandLine.appendSwitch('renderer-process-limit', '100');
-  app.commandLine.appendSwitch('max-active-webgl-contexts', '100');
-  app.commandLine.appendSwitch('webrtc-max-cpu-consumption-percentage', '100');
   app.commandLine.appendSwitch('enable-highres-timer');
   app.commandLine.appendSwitch('enable-accelerated-2d-canvas');
   app.commandLine.appendSwitch('no-pings');
@@ -103,8 +104,8 @@ const addSwitches = () => {
   app.commandLine.appendSwitch('enable-native-gpu-memory-buffers');
   app.commandLine.appendSwitch('enable-gpu-rasterization');
   app.commandLine.appendSwitch('enable-oop-rasterization');
-  app.commandLine.appendSwitch('disable-zero-copy');
-  app.commandLine.appendSwitch('max-gum-fps', '9999');
+  app.commandLine.appendSwitch('enable-zero-copy');
+  app.commandLine.appendSwitch('max-gum-fps=9999');
 }
 
 addSwitches();
