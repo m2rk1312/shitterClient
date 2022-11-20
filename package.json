@@ -1,6 +1,6 @@
 {
   "name": "shitterClient",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "description": "💀 shitterClient 💀 by m2rk",
   "main": "src/main.js",
   "scripts": {

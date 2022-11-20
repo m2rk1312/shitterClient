@@ -39,9 +39,6 @@ const init =
         event.preventDefault();
         shell.openExternal(url);
         return;
-      } else if (url.startsWith('https://krunker.io')) {
-        win.loadURL("https://krunker.io");
-        event.preventDefault()
       } else {
         event.preventDefault();
         const newWin = new BrowserWindow({
@@ -65,7 +62,7 @@ const init =
   }
 
 const addSwitches = () => {
-  app.commandLine.appendSwitch("disable-accelerated-video-decode", "false");
+  app.commandLine.appendSwitch("disable-accelerated-video-decode=false");
   app.commandLine.appendSwitch("disable-web-security=true");
   app.commandLine.appendSwitch("enable-pointer-lock-options");
   app.commandLine.appendSwitch('disable-features=WinRetrieveSuggestionsOnlyOnDemand,HardwareMediaKeyHandling,MediaSessionService');
