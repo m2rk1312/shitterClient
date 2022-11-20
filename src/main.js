@@ -14,8 +14,7 @@ const init =
       fullscreen: true,
       autoHideMenuBar: true,
       webPreferences: {
-        preload: path.join(__dirname, 'preload.js'),
-        webSecurity: false
+        preload: path.join(__dirname, 'preload.js')
       }
     })
 
@@ -66,6 +65,9 @@ const init =
   }
 
 const addSwitches = () => {
+  app.commandLine.appendSwitch("disable-accelerated-video-decode", "false");
+  app.commandLine.appendSwitch("disable-web-security=true");
+  app.commandLine.appendSwitch("enable-pointer-lock-options");
   app.commandLine.appendSwitch('disable-features=WinRetrieveSuggestionsOnlyOnDemand,HardwareMediaKeyHandling,MediaSessionService');
   app.commandLine.appendSwitch('enable-hardware-overlays=single-fullscreen,single-on-top,underlay');
   app.commandLine.appendSwitch('enable-features=EnableDrDc,CanvasOopRasterization,BackForwardCache:TimeToLiveInBackForwardCacheInSeconds/300/should_ignore_blocklists/true/enable_same_site/true,ThrottleDisplayNoneAndVisibilityHiddenCrossOriginIframes,UseSkiaRenderer,WebAssemblyLazyCompilation');
